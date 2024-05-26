@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Submit Scores</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script/script.js') }}"></script>
+
+</head>
 <body>
-
-<h2>HTML Forms</h2>
-
-<form action="/submit" method='post'>
-  <label for="Science">Science:</label><br>
-  <input type="text" id="science" name="science" value="0"><br>
-  <label for="Maths">Maths:</label><br>
-  <input type="text" id="maths" name="maths" value="0"><br><br>
-  <label for="C ">C:</label><br>
-  <input type="text" id="c" name="c" value="0"><br><br>
-  <label for="datascience">Data Science:</label><br>
-  <input type="text" id="datascience" name="datascience" value="0"><br><br>
-  <input type="submit" value="Submit">
-</form> 
-
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/submit".</p>
-
+    <div class="container">
+        <h2>Enter Your Scores</h2>
+        <form action="/submit" method="POST">
+            <label for="science">Science:</label>
+            <input type="text" id="science" name="science" required><br>
+            <label for="maths">Maths:</label>
+            <input type="text" id="maths" name="maths" required><br>
+            <label for="c">C:</label>
+            <input type="text" id="c" name="c" required><br>
+            <label for="datascience">Data Science:</label>
+            <input type="text" id="datascience" name="datascience" required><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
